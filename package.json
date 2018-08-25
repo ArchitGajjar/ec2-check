@@ -1,0 +1,40 @@
+{
+  "name": "ec2-check",
+  "version": "0.0.1",
+  "description": "A CLI tool to check whether your AWS EC2 instances are encrypted. ",
+  "main": "index.js",
+  "bin": {
+    "ec2-check": "./index.js"
+  },
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kyle1668/ec2-check.git"
+  },
+  "keywords": [
+    "aws",
+    "ec2",
+    "encryption",
+    "security",
+    "amazon",
+    "web",
+    "services"
+  ],
+  "author": "Kyle O'Brien",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kyle1668/ec2-check/issues"
+  },
+  "homepage": "https://github.com/Kyle1668/ec2-check#readme",
+  "devDependencies": {
+    "eslint": "^5.4.0",
+    "prettier": "^1.14.2"
+  },
+  "dependencies": {
+    "babel-eslint": "^8.2.6",
+    "chalk": "^2.4.1",
+    "commander": "^2.17.1"
+  }
+}
