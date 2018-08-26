@@ -1,7 +1,7 @@
 {
   "name": "ec2-check",
   "version": "0.0.1",
-  "description": "A CLI tool to check whether your AWS EC2 instances are encrypted. ",
+  "description": "A CLI tool to check whether your AWS EC2 instances are encrypted.",
   "main": "index.js",
   "bin": {
     "ec2-check": "./index.js"
