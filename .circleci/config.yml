@@ -7,4 +7,6 @@ jobs:
       - checkout
       - run:
           name: Run Eslint
-          command: npm i -D && eslint .
+          command:
+            npm i -D && |
+            ./node_modules/.bin/eslint .
