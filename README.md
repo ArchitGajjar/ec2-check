@@ -2,6 +2,7 @@
 
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
+[![Install Size](https://packagephobia.now.sh/badge?p=ec2-check)](https://packagephobia.now.sh/result?p=ec2-check)
 
 > A CLI tool to check whether your AWS EC2 instances are encrypted.
 
@@ -40,6 +41,7 @@ $ ec2-check
 ```
 
 Specific Region
+
 ```shell
 $ ec2-check --region us-east-2
 

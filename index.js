@@ -9,7 +9,7 @@ const program = require('commander')
 const { startTool } = require('./src/volumes')
 
 program
-  .version('0.0.2')
+  .version('0.0.3')
   .description('A tool to check whether your AWS EC2 instances are encrypted.')
   .option('-r, --region', 'Specify a particular region to lookup.')
   .parse(process.argv)
