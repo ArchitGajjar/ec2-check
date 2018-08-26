@@ -3,39 +3,80 @@
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
 
-> Utility to autogenerate a Remote.it bulk registration file with prop data.
+> A CLI tool to check whether your AWS EC2 instances are encrypted.
 
 ## Installation
 
 ```sh
-npm install -g @remote.it/bulkreg
+npm install -g ec2-check
 ```
 
 ## Usage
 
+All Regions
+
 ```shell
-$: bulkreg -n 500 ./props-devices-1.csv
+$ ec2-check
 
-Bulk registration CSV file with 500 prop devices created at ./props-devices-1.csv.
+      ########################################
+              AWS EC2 Encryption Check
+      ########################################
 
-$: bulkreg ./props-devices-2.csv
+               Scanning Instances
 
-Bulk registration CSV file with 10 prop devices created at ./props-devices-2.csv.
+      Volume ID: vol-05d216aa3675bf496
+      Availability Zone: us-east-2c
+      Name: Blog/Portfolio
+      State: in-use
+      Encrypted: False!
+
+      Volume ID: vol-088d60f4b643af66f
+      Availability Zone: us-east-1b
+      Name: kyleobrien.io
+      State: in-use
+      Encrypted: False!
+
+      ########################################
+```
+
+Specific Region
+```shell
+$ ec2-check --region us-east-2
+
+      ########################################
+              AWS EC2 Encryption Check
+      ########################################
+
+               Scanning Instances
+
+      Volume ID: vol-06a98698ebb44ffd4
+      Availability Zone: us-east-2b
+      Name: Polafide
+      State: in-use
+      Encrypted: False!
+
+      Volume ID: vol-00ac0e505900ac0b2
+      Availability Zone: us-east-2b
+      Name: Remote.it Docker Test
+      State: in-use
+      Encrypted: False!
+
+      ########################################
 ```
 
 ## Help
 
 ```bash
-$: bulkreg --help
+$   ec2-check -h
 
-  Usage: bulkreg [options]
+  Usage: ec2-check [options]
 
-  NPM module to autogenerate a Remote.it bulk registration file with prop data.
+  A tool to check whether your AWS EC2 instances are encrypted.
 
   Options:
 
     -V, --version  output the version number
-    -n, --number   The number of prop devices to be created.
+    -r, --region   Specify a particular region to lookup.
     -h, --help     output usage information
 ```
 
@@ -43,10 +84,10 @@ $: bulkreg --help
 
 MIT
 
-[npm-image]: https://img.shields.io/npm/v/@remote.it/bulkreg.svg?style=flat
-[npm-url]: https://www.npmjs.com/package/@remote.it/bulkreg
-[downloads-image]: https://img.shields.io/npm/dm/@remote.it/bulkreg.svg?style=flat
-[downloads-url]: https://www.npmjs.com/package/@remote.it/bulkreg
+[npm-image]: https://img.shields.io/npm/v/ec2-check.svg?style=flat
+[npm-url]: https://www.npmjs.com/package/ec2-check
+[downloads-image]: https://img.shields.io/npm/dm/ec2-check.svg?style=flat
+[downloads-url]: https://www.npmjs.com/package/ec2-check
 [travis-image]: https://img.shields.io/travis/{{{username}}}/{{{repoName}}}.svg?style=flat
 [travis-url]: https://travis-ci.org/{{{username}}}/{{{repoName}}}
 [coveralls-image]: https://img.shields.io/coveralls/{{{username}}}/{{{repoName}}}.svg?style=flat
