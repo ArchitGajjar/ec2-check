@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: 'circleci/node:10-jessie-browsers'
+    steps:
+      - checkout
+      - run:
+          name: Run Eslint
+          command: npm i -D && eslint .
